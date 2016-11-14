@@ -226,6 +226,7 @@ class LoginViewController: UIViewController {
         if let loggedInVC = storyboard?.instantiateViewController(withIdentifier: "LoggedInViewController") {
             print("At Navigate to the LoggedInViewController")
             passwordTextField.text = ""
+            context = LAContext()
             DispatchQueue.main.async { () -> Void in
                 
                 self.navigationController?.pushViewController(loggedInVC, animated: true)
